@@ -6,6 +6,7 @@
 <body>
 	<?php include 'conexao.php'; ?>
 	<?php
+		$data = $_POST['data'];
 		$cafeina = $_POST['cafeina'];
 		$treino = $_POST['treino'];
 		$master = $_POST['mast'];
@@ -20,7 +21,7 @@
 
 		$query = "INSERT INTO datas (data, cafeina, treino, master, leitura, estudo, refrigerante,
 		pos_treino, alcool, guitarra, fotografia, acucar) VALUES 
-		(NOW(), '$cafeina', '$treino', '$master', '$leitura', '$estudo', '$refrigerante', 
+		('$data', '$cafeina', '$treino', '$master', '$leitura', '$estudo', '$refrigerante', 
 		'$pos_treino', '$alcool', '$guitarra', '$fotografia', '$acucar')";
 
 		$result = mysqli_query($conn, $query);

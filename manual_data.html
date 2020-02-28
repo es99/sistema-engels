@@ -16,17 +16,12 @@
 <body>
 	<header>
 		<h1>Sistema de coleta de dados diários</h1>
-		<nav>
-			<ul>
-				<li><a href="manual_data.html">Data Manual</a></li>
-			</ul>
-		</nav>
 	</header>
 	<main>
 		<section>
 			<h2>Inserção de dados</h2>
 			<article>
-				<form action="insere_dados.php" method="POST">
+				<form action="insere_dados_manual.php" method="POST">
 					<table>
 						<tr>
 							<th><p>Cafeína</p></th>
@@ -108,6 +103,7 @@
 						</tr>
 						<tr>
 							<th><p>Açucar</p></th>
+							<th><p>Data</p></th>
 						</tr>
 						<tr>
 							<td>
@@ -115,6 +111,9 @@
 								<label for="sim">Sim</label><br />
 								<input type="radio" id="nao" name="acucar" value="nao">
 								<label for="nao">Não</label><br />
+							</td>
+							<td>
+								<input type="text" id="data" name="data">
 							</td>
 						</tr>
 					</table>
@@ -124,6 +123,7 @@
 		</section>
 	</main>
 	<footer>
+		<a href="index.php">Home</a>
 		<p>&copy; Engels Souza</p>
 	</footer>
 </body>
